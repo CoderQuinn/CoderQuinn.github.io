@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Quinn的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://quinnyoung.com/"/>
+  <updated>2020-07-19T19:58:12.261Z</updated>
+  <id>https://quinnyoung.com/</id>
+  
+  <author>
+    <name>QuinnYoung</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>七月最近感言</title>
+    <link href="https://quinnyoung.com/2020/07/20/%E4%B8%83%E6%9C%88%E6%84%9F%E8%A8%80/"/>
+    <id>https://quinnyoung.com/2020/07/20/%E4%B8%83%E6%9C%88%E6%84%9F%E8%A8%80/</id>
+    <published>2020-07-19T17:18:59.000Z</published>
+    <updated>2020-07-19T19:58:12.261Z</updated>
+    
+    <content type="html"><![CDATA[<p>在大学的时候，我就一直有一个想法是写博客，但由于个人惫懒，计划就搁浅到了如今。</p><p>去年年底，从上一家公司离职后，又碰上了武汉疫情的爆发，本来准备年后就去武汉的计划也被拖延。不过值得庆幸的是，在一月下旬的时候，终于是把驾照拿到了。回想学车的那几个月，练车前后的艰辛，教练的辱骂，还有安全员的刁难等，其中的种种心累，不足一一道哉。感觉自从大学的象牙塔出来，就马上进入互联网公司，在广州白白呆了三年，还是与这个社会格格不入。果然，成长的过程还是要付出代价。</p><p>近来，在leetcode上也陆陆续续刷了30道题，各类计算机相关的基础及教程也在复习中；故而想到了搭建个人博客，记下学习路上及生活中的点滴。愿下半年的找工作过程一路顺利，虽砥砺前行，却能乘风破浪。</p><p>此文的结尾，用我最喜欢的一句名言作结：乾坤未定，你我仍是黑马！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在大学的时候，我就一直有一个想法是写博客，但由于个人惫懒，计划就搁浅到了如今。&lt;/p&gt;
+&lt;p&gt;去年年底，从上一家公司离职后，又碰上了武汉疫情的爆发，本来准备年后就去武汉的计划也被拖延。不过值得庆幸的是，在一月下旬的时候，终于是把驾照拿到了。回想学车的那几个月，练车前后的艰辛
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://quinnyoung.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="job" scheme="https://quinnyoung.com/tags/job/"/>
+    
+  </entry>
+  
+</feed>
