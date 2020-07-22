@@ -447,6 +447,23 @@ height:50vh;
 <!-- City版安装代码已完成 -->
     
     
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '1595179139000', // 可选。默认为 location.href
+        owner: 'CoderQuinn',
+        repo: 'https://github.com/CoderQuinn/CoderQuinn.github.io',
+        oauth: {
+            client_id: '54cb3ce5024af7d52121',
+            client_secret: '29a9ec07675ce00b73345b3a164b5297046644da',
+        },
+    })
+    gitment.render('container')
+
+</script>
+
     <!-- gitalk评论 -->
 
     <!-- utteranc评论 -->
