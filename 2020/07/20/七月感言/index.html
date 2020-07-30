@@ -449,28 +449,26 @@ height:50vh;
     <!-- 评论插件 -->
     <!-- 来必力City版安装代码 -->
 
+    <div id="lv-container" data-id="city" data-uid= MTAyMC81MTExNC8yNzU5NQ==>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
 <!-- City版安装代码已完成 -->
     
     
     <!-- gitalk评论 -->
 
-    <div id="comment-container"></div>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.min.js"></script>
-    <script>
-        var gitalk = new Gitalk({
-            clientID: '54cb3ce5024af7d52121',
-            clientSecret: '29a9ec07675ce00b73345b3a164b5297046644da',
-            id: '1595179139000',
-            repo: 'CoderQuinn.github.io',
-            owner: 'CoderQuinn',
-            admin: "CoderQuinn",
-            createIssueManually: true,
-            distractionFreeMode: false
-        })
-        gitalk.render('comment-container')
-    </script>
-    
     <!-- utteranc评论 -->
 
     <!-- partial('_partial/comment/changyan') -->
@@ -617,9 +615,16 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -632,6 +637,11 @@ top:50vh;
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2020/07/30/%E7%BD%91%E9%A1%B5%E5%8D%A1%E9%A1%BF%EF%BC%8C%E5%8F%AF%E8%83%BD%E6%98%AFDNS%E7%9A%84%E9%97%AE%E9%A2%98/" >网页卡顿，可能是DNS的问题？</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -648,9 +658,11 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="job"><span class="iconfont-archer">&#xe606;</span>job</span>
+    
         <span class="sidebar-tag-name" data-tags="leetcode"><span class="iconfont-archer">&#xe606;</span>leetcode</span>
     
-        <span class="sidebar-tag-name" data-tags="job"><span class="iconfont-archer">&#xe606;</span>job</span>
+        <span class="sidebar-tag-name" data-tags="网络"><span class="iconfont-archer">&#xe606;</span>网络</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -685,9 +697,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="数据结构与算法"><span class="iconfont-archer">&#xe60a;</span>数据结构与算法</span>
-    
         <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
+    
+        <span class="sidebar-category-name" data-categories="数据结构与算法"><span class="iconfont-archer">&#xe60a;</span>数据结构与算法</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
