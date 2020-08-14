@@ -20,24 +20,23 @@
     <meta name="keywords" content="hexo,iOS,QuinnYoung,‘博客blog'">
     
     <meta name="description" content="">
-    <meta name="description" content="在大学的时候，我就一直有一个想法是写博客，但由于个人惫懒，计划就搁浅到了如今。 去年年底，从上一家公司离职后，又碰上了武汉疫情的爆发，本来准备年后就去武汉的计划也被拖延。不过值得庆幸的是，在一月下旬的时候，终于是把驾照拿到了。回想学车的那几个月，练车前后的艰辛，教练的辱骂，还有安全员的刁难等，其中的种种心累，不足一一道哉。感觉自从大学的象牙塔出来，就马上进入互联网公司，在广州白白呆了三年，还是与这">
+    <meta name="description" content="leetcode 53 Maximum Subarray 最大子序和蛮力枚举法很容易想到的一个算法，就是逐一枚举出所有子列和进行比较，找出最大值，其代码实现如下： 123456789101112131415int maxSubArray(vector&lt;int&gt;&amp; nums) &amp;#123;    int result &#x3D; INT_MIN;    size_t size &#x3D; num">
 <meta property="og:type" content="article">
-<meta property="og:title" content="七月最近感言">
-<meta property="og:url" content="https://quinnyoung.com/2020/07/20/%E4%B8%83%E6%9C%88%E6%84%9F%E8%A8%80/index.html">
+<meta property="og:title" content="leetcode 53 Maximum Subarray">
+<meta property="og:url" content="https://quinnyoung.com/2020/08/14/leetcode-53-Maximum-Subarray/index.html">
 <meta property="og:site_name" content="Quinn的博客">
-<meta property="og:description" content="在大学的时候，我就一直有一个想法是写博客，但由于个人惫懒，计划就搁浅到了如今。 去年年底，从上一家公司离职后，又碰上了武汉疫情的爆发，本来准备年后就去武汉的计划也被拖延。不过值得庆幸的是，在一月下旬的时候，终于是把驾照拿到了。回想学车的那几个月，练车前后的艰辛，教练的辱骂，还有安全员的刁难等，其中的种种心累，不足一一道哉。感觉自从大学的象牙塔出来，就马上进入互联网公司，在广州白白呆了三年，还是与这">
+<meta property="og:description" content="leetcode 53 Maximum Subarray 最大子序和蛮力枚举法很容易想到的一个算法，就是逐一枚举出所有子列和进行比较，找出最大值，其代码实现如下： 123456789101112131415int maxSubArray(vector&lt;int&gt;&amp; nums) &amp;#123;    int result &#x3D; INT_MIN;    size_t size &#x3D; num">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-19T17:18:59.000Z">
-<meta property="article:modified_time" content="2020-07-20T06:05:25.863Z">
+<meta property="article:published_time" content="2020-08-14T11:36:21.000Z">
+<meta property="article:modified_time" content="2020-08-14T12:12:22.608Z">
 <meta property="article:author" content="QuinnYoung">
-<meta property="article:tag" content="job">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
     <link rel="alternate" href="/atom.xml" title="Quinn的博客" type="application/atom+xml">
     
-    <title>七月最近感言 · Quinn的博客</title>
+    <title>leetcode 53 Maximum Subarray · Quinn的博客</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -232,7 +231,7 @@
                 <a href="/" >Quinn的博客</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">七月最近感言</a>
+                <a href="#" class="post-name">leetcode 53 Maximum Subarray</a>
             </div>
     </div>
     
@@ -262,7 +261,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            七月最近感言
+            leetcode 53 Maximum Subarray
             <!-- 404 -->
             
         </h1>
@@ -279,20 +278,14 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
-                    <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "job">job</a>
-    
-</div>
-                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">308</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">555</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/07/20</span>
+                    <span class="post-intro-time">2020/08/14</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -416,19 +409,39 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>在大学的时候，我就一直有一个想法是写博客，但由于个人惫懒，计划就搁浅到了如今。</p>
-<p>去年年底，从上一家公司离职后，又碰上了武汉疫情的爆发，本来准备年后就去武汉的计划也被拖延。不过值得庆幸的是，在一月下旬的时候，终于是把驾照拿到了。回想学车的那几个月，练车前后的艰辛，教练的辱骂，还有安全员的刁难等，其中的种种心累，不足一一道哉。感觉自从大学的象牙塔出来，就马上进入互联网公司，在广州白白呆了三年，还是与这个社会格格不入。果然，成长的过程还是要付出代价。</p>
-<p>近来，在leetcode上也陆陆续续刷了30道题，各类计算机相关的基础及教程也在复习中；故而想到了搭建个人博客，记下学习路上及生活中的点滴。愿下半年的找工作过程一路顺利，虽砥砺前行，却能乘风破浪。</p>
-<p>此文的结尾，用我最喜欢的一句名言作结：乾坤未定，你我仍是黑马！</p>
+        <h1 id="leetcode-53-Maximum-Subarray-最大子序和"><a href="#leetcode-53-Maximum-Subarray-最大子序和" class="headerlink" title="leetcode 53 Maximum Subarray 最大子序和"></a>leetcode 53 Maximum Subarray 最大子序和</h1><h2 id="蛮力枚举法"><a href="#蛮力枚举法" class="headerlink" title="蛮力枚举法"></a>蛮力枚举法</h2><p>很容易想到的一个算法，就是逐一枚举出所有子列和进行比较，找出最大值，其代码实现如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> result = INT_MIN;</span><br><span class="line">    <span class="keyword">size_t</span> <span class="built_in">size</span> = nums.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">size</span>; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; <span class="built_in">size</span>; ++j) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = i; k &lt;= j; ++k) &#123;</span><br><span class="line">                sum += nums[k];</span><br><span class="line">            &#125;</span><br><span class="line">            result = <span class="built_in">max</span>(result, sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意到，蛮力枚举法的时间复杂度是O(n<sup>3</sup>)，显然并不是一个实用的算法。</p>
+<h2 id="优化枚举法"><a href="#优化枚举法" class="headerlink" title="优化枚举法"></a>优化枚举法</h2><p>注意观察蛮力枚举法的过程，我们发现其中[i…j]的子序列和，完全可以由[i…j-1]的结果再累加nums[j]求出，没必要再从头计算。于是有了改进的算法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> result = INT_MIN;</span><br><span class="line">    <span class="keyword">size_t</span> <span class="built_in">size</span> = nums.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">size</span>; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; <span class="built_in">size</span>; ++j) &#123;</span><br><span class="line">            sum += nums[j];</span><br><span class="line">            result = <span class="built_in">max</span>(result, sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优化枚举法的时间复杂度是O(n<sup>2</sup>)，仍然不是一个最快的算法。</p>
+<h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><p>基本思想就是将原问题拆分为若干子问题，分别解决后再将结果合而治之，多用递归调用的形式实现</p>
+<ol>
+<li><p>将[𝟏. . 𝒏]序列分为[𝟏. . 𝒏/𝟐]和[𝒏/𝟐 + 𝟏. . ] </p>
+</li>
+<li><p>递归求解子问题 </p>
+<p>序列[𝟏. . 𝒏/𝟐] 的最大子序和 s<sub>1</sub></p>
+<p>序列[𝒏/𝟐 + 𝟏. . 𝒏] 的最大子序和s<sub>2</sub></p>
+<p>跨中点的最大子序列和 s<sub>3</sub></p>
+</li>
+<li><p>合并子问题的解，得到s<sub>max</sub> = 𝒎𝒂𝒙{  s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub>}</p>
+</li>
+</ol>
+<p>代码实现如下:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> divide_conquer(nums, <span class="number">0</span>, nums.<span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">divide_conquer</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">long</span> left, <span class="keyword">long</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (left == right) <span class="keyword">return</span> nums[left];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">long</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> left_max = divide_conquer(nums, left, mid);</span><br><span class="line">    <span class="keyword">int</span> right_max = divide_conquer(nums, mid + <span class="number">1</span>, right);</span><br><span class="line">    <span class="keyword">int</span> crossing_middle_max = crossing_middle_sub_max(nums, left, mid, right);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">max</span>(<span class="built_in">max</span>(left_max, right_max), crossing_middle_max);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">crossing_middle_sub_max</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">long</span> left, <span class="keyword">long</span> mid, <span class="keyword">long</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left_sum = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> right_sum = INT_MIN;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">long</span> i = mid; i &gt;= left; i--) &#123;</span><br><span class="line">        sum += nums[i];</span><br><span class="line">        left_sum = <span class="built_in">max</span>(sum, left_sum);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">long</span> i = mid+<span class="number">1</span>; i &lt;= right; i++) &#123;</span><br><span class="line">        sum += nums[i];</span><br><span class="line">        right_sum = <span class="built_in">max</span>(sum, right_sum);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left_sum + right_sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其递归式为T(N) = 2 T(N/2) + O(N)，由递归树或主定理很容易求得其时间复杂度为T(N) = O(NLogN)。</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="https://quinnyoung.com">QuinnYoung</a>
-            <p>原文链接：<a href="https://quinnyoung.com/2020/07/20/%E4%B8%83%E6%9C%88%E6%84%9F%E8%A8%80/">https://quinnyoung.com/2020/07/20/%E4%B8%83%E6%9C%88%E6%84%9F%E8%A8%80/</a>
-            <p>发表日期：<a href="https://quinnyoung.com/2020/07/20/%E4%B8%83%E6%9C%88%E6%84%9F%E8%A8%80/">July 20th 2020, 1:18:59 am</a>
-            <p>更新日期：<a href="https://quinnyoung.com/2020/07/20/%E4%B8%83%E6%9C%88%E6%84%9F%E8%A8%80/">July 20th 2020, 2:05:25 pm</a>
+            <p>原文链接：<a href="https://quinnyoung.com/2020/08/14/leetcode-53-Maximum-Subarray/">https://quinnyoung.com/2020/08/14/leetcode-53-Maximum-Subarray/</a>
+            <p>发表日期：<a href="https://quinnyoung.com/2020/08/14/leetcode-53-Maximum-Subarray/">August 14th 2020, 7:36:21 pm</a>
+            <p>更新日期：<a href="https://quinnyoung.com/2020/08/14/leetcode-53-Maximum-Subarray/">August 14th 2020, 8:12:22 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -436,13 +449,13 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/07/24/leetcode224-Basic-Calculator/" title= "leetcode224 Basic Calculator">
-                    <div class="nextTitle">leetcode224 Basic Calculator</div>
-                </a>
-            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/07/30/%E7%BD%91%E9%A1%B5%E5%8D%A1%E9%A1%BF%EF%BC%8C%E5%8F%AF%E8%83%BD%E6%98%AFDNS%E7%9A%84%E9%97%AE%E9%A2%98/" title= "网页卡顿，可能是DNS的问题？">
+                    <div class="prevTitle">网页卡顿，可能是DNS的问题？</div>
+                </a>
             
         </li>
     </ul>
@@ -584,7 +597,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#leetcode-53-Maximum-Subarray-最大子序和"><span class="toc-number">1.</span> <span class="toc-text">leetcode 53 Maximum Subarray 最大子序和</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#蛮力枚举法"><span class="toc-number">1.1.</span> <span class="toc-text">蛮力枚举法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化枚举法"><span class="toc-number">1.2.</span> <span class="toc-text">优化枚举法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分治法"><span class="toc-number">1.3.</span> <span class="toc-text">分治法</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
