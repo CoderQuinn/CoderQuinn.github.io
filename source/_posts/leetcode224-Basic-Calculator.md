@@ -22,11 +22,9 @@ typora-copy-images-to:
 
 一开始面对此题，很容易想到的是通常解决此类栈及表达式问题的思路。
 
-前提是只有加减运算，即省去了运算符号优先级的比较。
+前提是只有加减运算，即省去了运算符号优先级的比较。定义两个栈，num_stack用于存储数据，op_stack用于存储操作符。
 
 ### 算法：
-
-定义两个栈，num_stack用于存储数据，op_stack用于存储操作符。
 
 1. 从左往右扫描字符串，遇到操作数入数据栈;
 2. 若遇到操作符 + 或 - 时：
@@ -110,11 +108,107 @@ public:
 
 ## 变通的解法
 
-[逆波兰表达式](https://zh.wikipedia.org/wiki/%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E7%A4%BA%E6%B3%95)，即后序表达式，很容易求值详见[leetcdoe 115](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)，而中序表达式转换为后序表达式可以通过[Shunting yard算法](https://zh.wikipedia.org/wiki/Shunting_yard算法)实现，该基本计算器的求解就分为两个比较容易的步骤了。
+[逆波兰表达式](https://zh.wikipedia.org/wiki/%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E7%A4%BA%E6%B3%95)，即后序表达式，其求值的问题也在[leetcdoe 150](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)讨论过；而中序表达式转换为后序表达式可以通过[Shunting yard算法](https://zh.wikipedia.org/wiki/Shunting_yard算法)实现，所以该基本计算器的求解就分为两个相对比较容易的子问题了，其算法过程如下：
+
+```c++
+class Solution {
+public:
+    int calculate(string s) {
+        vector<string> vector = shunting_yard_algorithm(s);
+        return evalRPN(vector);
+    }
+    
+  	// 后序表达式求值 
+    int evalRPN(vector<string>& tokens) {
+        stack<int> num_stack;
+        for (size_t i = 0; i < tokens.size(); ++i) {
+            string &curr = tokens[i];
+            if (curr == "+" || curr == "-") {
+                int num2 = num_stack.top();
+                num_stack.pop();
+                int num1 = num_stack.top();
+                num_stack.pop();
+                int sum;
+                if (curr == "-") {
+                    sum = num1 - num2;
+                } else {
+                    sum = num1 + num2;
+                }
+                num_stack.push(sum);
+            } else {
+                int num = stoi(curr);
+                num_stack.push(num);
+            }
+        }
+        
+        return num_stack.top();
+    }
+    
+  	// 中序表达式转为后序表达式
+    vector<string> shunting_yard_algorithm(string s) {
+        vector<string> str_vec;
+        stack<char> operator_stack;
+        
+        for (int i = 0; i < s.length(); ++i) {
+            switch (s[i]) {
+                case '+':
+                case '-':
+                    if (!operator_stack.empty() && (operator_stack.top() == '+' || operator_stack.top() == '-')) 
+                    {
+                        string op;
+                        op += operator_stack.top();
+                        operator_stack.pop();
+                        
+                        str_vec.push_back(op);
+                    }
+                    operator_stack.push(s[i]);
+                    break;
+                case '(':
+                    operator_stack.push(s[i]);
+                    break;
+                case ')':
+                    while (operator_stack.top() != '(') {
+                        string op;
+                        op += operator_stack.top();
+                        operator_stack.pop();
+                        
+                        str_vec.push_back(op);
+                    }
+                    operator_stack.pop();
+                    break;
+                case ' ':
+                    continue;
+                    break;
+                default:
+                    if (isdigit(s[i])) {
+                        string num_str;
+                        num_str += s[i];
+                        while (i + 1 < s.length() && isdigit(s[i + 1])) {
+                            ++i;
+                            num_str += s[i];
+                        }
+                        str_vec.push_back(num_str);
+                    }
+                    break;
+            }
+        }
+        while (!operator_stack.empty()) {
+            string op;
+            op += operator_stack.top();
+            operator_stack.pop();
+            
+            str_vec.push_back(op);
+        }
+        return str_vec;
+    }
+};
+```
+
+
 
 ## 巧妙的解法
 
-leetcode中国官方关于基本计算器也提出了比较巧妙的[解题思路](https://leetcode-cn.com/problems/basic-calculator/solution/ji-ben-ji-suan-qi-by-leetcode/)，我选择了其第二种进行说明。
+leetcode中国官方关于基本计算器也提出了比较巧妙的[解题思路](https://leetcode-cn.com/problems/basic-calculator/solution/ji-ben-ji-suan-qi-by-leetcode/)，选择了其第二种进行说明。
 
 ### 算法：
 
@@ -180,9 +274,6 @@ leetcode中国官方关于基本计算器也提出了比较巧妙的[解题思�
        }
    };
    ```
-
-   
-
 
 
 
